@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delhi House Price Predictor</title>
+
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="container">
+
+        <header class="hero">
+            <div class="badge">AI • MACHINE LEARNING</div>
+
+            <h1>
+                Delhi House
+                <span>Price Predictor</span>
+            </h1>
+
+            <p>
+                Estimate property prices using a machine learning
+                model trained on Delhi & Gurgaon housing data.
+            </p>
+        </header>
+
+
+        <section class="card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Property Details</h2>
+                    <p>Enter the details of the property</p>
+                </div>
+
+                <div class="status">
+                    <span></span>
+                    ML Model Online
+                </div>
+            </div>
+
+
+            <form id="predictionForm">
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>Area (sq.ft)</label>
+                        <input
+                            type="number"
+                            id="Area"
+                            placeholder="e.g. 1500"
+                            min="100"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>BHK</label>
+                        <input
+                            type="number"
+                            id="BHK"
+                            placeholder="e.g. 3"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>Bathroom</label>
+                        <input
+                            type="number"
+                            id="Bathroom"
+                            placeholder="e.g. 2"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>Parking</label>
+                        <input
+                            type="text"
+                            id="Parking"
+                            placeholder="e.g. 1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>Furnishing</label>
+                        <select id="Furnishing" required>
+                            <option value="">Select</option>
+                            <option value="Furnished">Furnished</option>
+                            <option value="Semi-Furnished">Semi-Furnished</option>
+                            <option value="Unfurnished">Unfurnished</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>Property Type</label>
+                        <select id="Type" required>
+                            <option value="">Select</option>
+                            <option value="Flat">Flat</option>
+                            <option value="House">House</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group full">
+                        <label>Locality</label>
+                        <input
+                            type="text"
+                            id="Locality"
+                            placeholder="e.g. Dwarka"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>Status</label>
+                        <select id="Status" required>
+                            <option value="">Select</option>
+                            <option value="Ready_to_move">Ready to Move</option>
+                            <option value="Almost_ready">Almost Ready</option>
+                        </select>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>Transaction</label>
+                        <select id="Transaction" required>
+                            <option value="">Select</option>
+                            <option value="Resale">Resale</option>
+                            <option value="New_Property">New Property</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <button type="submit" id="predictBtn">
+                    <span>Predict House Price</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </form>
+
+
+            <div id="loading" class="loading hidden">
+                <div class="loader"></div>
+                <span>Analyzing property...</span>
+            </div>
+
+
+            <div id="result" class="result hidden">
+
+                <p class="result-label">
+                    Estimated Property Price
+                </p>
+
+                <h3 id="predictedPrice">
+                    ₹0
+                </h3>
+
+                <p class="result-note">
+                    Prediction generated by the trained ML model.
+                </p>
+
+            </div>
+
+
+            <div id="error" class="error hidden"></div>
+
+        </section>
+
+
+        <footer>
+            <p>
+                Built with Python • Scikit-learn • FastAPI
+            </p>
+        </footer>
+
+    </main>
+
+
+    <script src="/frontend/script.js"></script>
+
+</body>
+
+</html>

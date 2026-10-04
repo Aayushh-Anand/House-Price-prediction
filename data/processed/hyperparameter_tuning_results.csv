@@ -1,0 +1,4 @@
+Model,Best CV R2,Best Parameters
+Extra Trees,0.7487283760758028,"{'n_estimators': 200, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 1.0, 'max_depth': 20}"
+Hist Gradient Boosting,0.7352085970279144,"{'max_leaf_nodes': 15, 'max_iter': 500, 'learning_rate': 0.01, 'l2_regularization': 10}"
+KNN,0.717156452974107,"{'weights': 'distance', 'p': 2, 'n_neighbors': 11}"
