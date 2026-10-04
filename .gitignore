@@ -20,9 +20,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Large ML model files
-*.pkl
-
 # Temporary files
 *.tmp
 *.log
