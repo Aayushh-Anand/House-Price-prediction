@@ -1,6 +1,4 @@
-from pathlib import Path
-
-readme = """# 🏠 Delhi House Price Prediction
+## 🏠 Delhi House Price Prediction
 
 An end-to-end Machine Learning project for predicting residential property prices using Delhi and Gurgaon house data.
 
