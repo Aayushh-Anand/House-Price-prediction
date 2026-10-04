@@ -6,7 +6,7 @@ The project covers the complete ML lifecycle — from data cleaning and explorat
 
 ---
 
-**## 🌐 Live Demo
+## 🌐 Live Demo
 
 🔗 **Live Application:** https://house-price-prediction-zgwm.onrender.com
 
